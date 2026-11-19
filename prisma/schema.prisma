@@ -1,0 +1,12 @@
+// use prisma-8
+
+model ArchivoMultimedia {
+  id           String   @id @onCreate(uuid())
+  titulo       String
+  url          String
+  publicId     String
+  tipoArchivo  String
+  tamanoBytes  Int
+  fechaSubida  DateTime @default(now())
+  subidoPor    String
+}
